@@ -2,7 +2,6 @@ const db = require('../data/dbConfig');
 
 module.exports = {
     add,
-    findByRole,
     findById,
 }
 
@@ -11,9 +10,6 @@ function add(user){
     return findById(id);
 }
 
-function findByRole(role){
-    return db('users').where({role})
-}
 
 function findById(id){
     return db('users')
