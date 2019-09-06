@@ -12,6 +12,8 @@ server.use(helmet());
 server.use(cors());
 server.use(express.json());
 
+server.use('/api/auth', authRouter);
+
 server.get("/", (req,res) =>{
     res.status(200).json({api: "im running"});
 });
