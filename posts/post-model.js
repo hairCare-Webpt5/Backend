@@ -5,7 +5,7 @@ module.exports = {
     find,
     findBy,
     findById,
-    
+
 }
 
 function find(){
@@ -23,7 +23,7 @@ function findById(id){
 }
 
 function add(post){
-    const [id] = await db('post').insert(post);
+   // const [id] = await db('post').insert(post);
     return findById(id);
 }
 

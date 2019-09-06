@@ -10,6 +10,3 @@ router.get('/posts', restricted, (req,res) => {
         .catch(err => res.send(err));
 });
 
-router.post('/newPost', restricted, (req,res) => {
-   
-});
