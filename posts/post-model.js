@@ -5,6 +5,7 @@ module.exports = {
     find,
     findBy,
     findById,
+    findByRole,
 
 }
 
@@ -16,14 +17,19 @@ function findBy(filter){
     return db('post').where(filter);
 }
 
-function findById(id){
+function findById(stylistId){
     return db('post')
-    .where({id})
+    .where('userId',stylistId)
     .first();
 }
 
 function add(post){
    // const [id] = await db('post').insert(post);
-    return findById(id);
+    return db('posts')
+            .insert(post)
+}
+
+function findByRole(role){
+    return db('users').where('role', role)
 }
 
