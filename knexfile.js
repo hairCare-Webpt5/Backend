@@ -9,7 +9,7 @@ module.exports = {
       filename: './data/data.db3'
     },
     useNullAsDefault: true,
-  },
+ 
 
   pool: {
     afterCreate: (conn, done) => {
@@ -18,10 +18,11 @@ module.exports = {
   },
 
   migrations: {
-    directory: './data/migrations'
+    directory: './data/migrations',
   },
 
   seeds: {
-    directory: './data/seeds'
-  }
+    directory: './data/seeds',
+  },
+}, 
 };
