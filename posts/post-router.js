@@ -1,9 +1,9 @@
 const router = require('express').Router();
 const Post = require('./post-model');
 const restricted = require('../auth/auth-middleware');
-const Users = require('./user-model');
+const Users = require('../users/user-model');
 
-router.('/', restricted, (req,res) => {
+router.get('/', restricted, (req,res) => {
     Post.get()
         .then(posts => {
             res.status(201).json({posts:posts});
