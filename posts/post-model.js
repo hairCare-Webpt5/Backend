@@ -5,8 +5,6 @@ module.exports = {
     find,
     findBy,
     findById,
-    findByRole,
-
 }
 
 function find(){
@@ -29,7 +27,4 @@ function add(post){
             .insert(post)
 }
 
-function findByRole(role){
-    return db('users').where('role', role)
-}
 

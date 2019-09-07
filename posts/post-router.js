@@ -1,15 +1,16 @@
 const router = require('express').Router();
 const Post = require('./post-model');
 const restricted = require('../auth/auth-middleware');
+const Users = require('./user-model');
 
-router.get('/', restricted, (req,res) => {
+router.('/', restricted, (req,res) => {
     Post.get()
         .then(posts => {
             res.status(201).json({posts:posts});
         })
         .catch(err => res.send(err));
 });
-
+   
 router.get('/:id', restricted,(req,res) => {
     const [id] = req.params.id;
 
@@ -27,7 +28,8 @@ router.get('/:id', restricted,(req,res) => {
         })
 })
 
-router.post('/', restricted, (req,res) => {
+router.post('/posts', restricted, (req,res) => {
+    
     Post.add(req.body)
         .then(post => {
             res.status(200).json(post)
