@@ -7,7 +7,7 @@ const router = express.Router();
 router.get('/stylist', restricted, (req,res) => {
     // stylist 1
     // user  2
-    Users.find(1)
+    Users.findStylist(1)
             .then(stylist => {
                 res.status(201).json({stylist:stylist});
             })
@@ -15,7 +15,7 @@ router.get('/stylist', restricted, (req,res) => {
 });
 
 router.get('/users', restricted, (req,res) => {
-    Users.find(2)
+    Users.findStylist(2)
          .then(users => {
              res.status(201).json({users:users});
          })
