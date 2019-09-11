@@ -4,6 +4,7 @@ const restricted = require('../auth/auth-middleware');
 
 
 router.get('/', restricted, (req,res) => {
+    console.log(req);
     Post.find()
         .then(posts => {
             res.status(201).json({posts:posts});
