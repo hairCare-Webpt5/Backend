@@ -7,7 +7,7 @@ module.exports = (req, res, next) => {
 
     if (token) {
         jwt.verify(token, secrets.jwtSecret, (error, decodedToken) => {
-
+            console.log(token.payload);
             if(decodedToken) {
                 next();
             } else {
@@ -19,3 +19,4 @@ module.exports = (req, res, next) => {
     }
 }
 
+      

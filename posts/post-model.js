@@ -5,6 +5,7 @@ module.exports = {
     find,
     findBy,
     findById,
+    
 }
 
 function find(){
@@ -27,5 +28,4 @@ function add(post){
     return db('posts')
             .insert(post)
 }
-
 
