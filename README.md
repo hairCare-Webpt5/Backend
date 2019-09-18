@@ -23,7 +23,7 @@ Register: https://obscure-stream-79118.herokuapp.com/api/auth/register
 	"password": ,
 	"location": ,
 	"phone": ,
-	"roleId": 
+	"roleId":  "You need to specify what type of account"  1 = stylist 2 = client
 }
 
 Login:    https://obscure-stream-79118.herokuapp.com/api/auth/login
@@ -50,8 +50,8 @@ Authorization: Token
 New post: https://obscure-stream-79118.herokuapp.com/api/posts/newPost
 
  {
-     id: 1, title: 'MoHawk', 
-     description: 'beautiful', 
-     image: 'mohawk', 
-     userId: 1
+     title: 
+     description:  
+     image:     "url"
+     userId:    "You need to specify what type of account"  1 = stylist 2 = client
 },
